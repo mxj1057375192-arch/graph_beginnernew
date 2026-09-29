@@ -1,0 +1,80 @@
+{
+  "args": {
+    "dataset": "Flickr",
+    "models": [
+      "GraphSAGE",
+      "GIN"
+    ],
+    "batch_sizes": [
+      64,
+      256,
+      1024
+    ],
+    "epochs": 3,
+    "hidden": 32,
+    "task_dir": "task1",
+    "out": "results/bench_sampler2.json"
+  },
+  "results": [
+    {
+      "dataset": "Flickr",
+      "model": "GraphSAGE",
+      "batch_size": 64,
+      "ok": true,
+      "sec_per_epoch": 10.671485150000024,
+      "grad_steps_per_epoch": 698,
+      "ms_per_step": 15.28866067335247,
+      "wall_sec": 32.74394229999996
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GraphSAGE",
+      "batch_size": 256,
+      "ok": true,
+      "sec_per_epoch": 6.956547549999982,
+      "grad_steps_per_epoch": 175,
+      "ms_per_step": 39.75170028571418,
+      "wall_sec": 22.467748700000016
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GraphSAGE",
+      "batch_size": 1024,
+      "ok": true,
+      "sec_per_epoch": 5.023482599999966,
+      "grad_steps_per_epoch": 44,
+      "ms_per_step": 114.17005909090831,
+      "wall_sec": 16.557458199999928
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GIN",
+      "batch_size": 64,
+      "ok": true,
+      "sec_per_epoch": 15.413225099999977,
+      "grad_steps_per_epoch": 698,
+      "ms_per_step": 22.081984383954122,
+      "wall_sec": 46.511833300000035
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GIN",
+      "batch_size": 256,
+      "ok": true,
+      "sec_per_epoch": 9.437657200000103,
+      "grad_steps_per_epoch": 175,
+      "ms_per_step": 53.929469714286306,
+      "wall_sec": 30.42764390000002
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GIN",
+      "batch_size": 1024,
+      "ok": true,
+      "sec_per_epoch": 5.721343649999994,
+      "grad_steps_per_epoch": 44,
+      "ms_per_step": 130.03053749999987,
+      "wall_sec": 19.585150999999996
+    }
+  ]
+}

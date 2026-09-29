@@ -1,0 +1,32 @@
+{
+  "args": {
+    "datasets": [
+      "Flickr"
+    ],
+    "models": [
+      "GCN"
+    ],
+    "modes": [
+      "full"
+    ],
+    "epochs": 3,
+    "hidden": 32,
+    "task_dir": "task1",
+    "skip_validate": true,
+    "out": "D:\\new graphlearn\\graph_beginner\\results\\smoke.json"
+  },
+  "matrix": [
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "mode": "full",
+      "ok": true,
+      "sec_per_epoch": 0.5064034499999934,
+      "grad_steps_per_epoch": 1,
+      "params": 17447,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 2.513492499999984
+    }
+  ]
+}

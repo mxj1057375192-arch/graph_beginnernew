@@ -1,0 +1,198 @@
+{
+  "args": {
+    "task": "task3",
+    "datasets": [
+      "ZINC"
+    ],
+    "models": [
+      "GCN",
+      "GAT",
+      "GraphSAGE",
+      "GIN"
+    ],
+    "modes": [
+      "full",
+      "sampler"
+    ],
+    "poolings": [
+      "mean",
+      "max",
+      "min"
+    ],
+    "epochs": 3,
+    "hidden": 32,
+    "task_dir": "task3",
+    "skip_validate": false,
+    "out": "results/smoke_task3_zinc.json"
+  },
+  "matrix": [
+    {
+      "dataset": "ZINC",
+      "model": "GCN",
+      "pooling": "mean",
+      "ok": true,
+      "sec_per_epoch": 1.9587247333333078,
+      "grad_steps_per_epoch": 79,
+      "params": 4065,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 0.7210355148315429,
+      "wall_sec": 9.254410000000007
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GCN",
+      "pooling": "max",
+      "ok": true,
+      "sec_per_epoch": 1.9182696999999582,
+      "grad_steps_per_epoch": 79,
+      "params": 4065,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.035086166381836,
+      "wall_sec": 9.14485569999988
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GCN",
+      "pooling": "min",
+      "ok": true,
+      "sec_per_epoch": 1.9177762000000864,
+      "grad_steps_per_epoch": 79,
+      "params": 4065,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.037050682067871,
+      "wall_sec": 9.17143729999998
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GAT",
+      "pooling": "mean",
+      "ok": true,
+      "sec_per_epoch": 2.976805499999955,
+      "grad_steps_per_epoch": 79,
+      "params": 14049,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 0.775283561706543,
+      "wall_sec": 14.009519600000203
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GAT",
+      "pooling": "max",
+      "ok": true,
+      "sec_per_epoch": 3.154440799999975,
+      "grad_steps_per_epoch": 79,
+      "params": 14049,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 0.9872292556762695,
+      "wall_sec": 14.595388200000116
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GAT",
+      "pooling": "min",
+      "ok": true,
+      "sec_per_epoch": 3.1568485333333833,
+      "grad_steps_per_epoch": 79,
+      "params": 14049,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 0.9239330825805664,
+      "wall_sec": 14.468636599999854
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GraphSAGE",
+      "pooling": "mean",
+      "ok": true,
+      "sec_per_epoch": 1.7731975333332837,
+      "grad_steps_per_epoch": 79,
+      "params": 7137,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 0.7961616439819336,
+      "wall_sec": 8.370614299999943
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GraphSAGE",
+      "pooling": "max",
+      "ok": true,
+      "sec_per_epoch": 1.9957197666667525,
+      "grad_steps_per_epoch": 79,
+      "params": 7137,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.1106759643554687,
+      "wall_sec": 9.03970830000003
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GraphSAGE",
+      "pooling": "min",
+      "ok": true,
+      "sec_per_epoch": 1.920396799999935,
+      "grad_steps_per_epoch": 79,
+      "params": 7137,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.1377791290283203,
+      "wall_sec": 8.864597199999935
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GIN",
+      "pooling": "mean",
+      "ok": true,
+      "sec_per_epoch": 1.9593296666666902,
+      "grad_steps_per_epoch": 79,
+      "params": 7233,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.0516140670776368,
+      "wall_sec": 9.280792499999961
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GIN",
+      "pooling": "max",
+      "ok": true,
+      "sec_per_epoch": 2.0424229666665874,
+      "grad_steps_per_epoch": 79,
+      "params": 7233,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.4379063110351562,
+      "wall_sec": 9.463063600000169
+    },
+    {
+      "dataset": "ZINC",
+      "model": "GIN",
+      "pooling": "min",
+      "ok": true,
+      "sec_per_epoch": 1.8280158999999305,
+      "grad_steps_per_epoch": 79,
+      "params": 7233,
+      "n_train_graphs": 10000,
+      "regression": true,
+      "metric_name": "MAE",
+      "val": 1.3011099243164062,
+      "wall_sec": 8.575720499999989
+    }
+  ]
+}

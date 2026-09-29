@@ -1,0 +1,122 @@
+{
+  "args": {
+    "dataset": "Flickr",
+    "models": [
+      "GCN",
+      "GAT"
+    ],
+    "batch_sizes": [
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "epochs": 3,
+    "hidden": 32,
+    "task_dir": "task1",
+    "out": "D:\\new graphlearn\\graph_beginner\\results\\bench_sampler.json"
+  },
+  "results": [
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "batch_size": 64,
+      "ok": true,
+      "sec_per_epoch": 8.931430499999976,
+      "grad_steps_per_epoch": 698,
+      "ms_per_step": 12.795745702005698,
+      "wall_sec": 26.903014299999995
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "batch_size": 128,
+      "ok": true,
+      "sec_per_epoch": 6.900317149999978,
+      "grad_steps_per_epoch": 349,
+      "ms_per_step": 19.771682378223435,
+      "wall_sec": 21.08696139999995
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "batch_size": 256,
+      "ok": true,
+      "sec_per_epoch": 5.356541600000014,
+      "grad_steps_per_epoch": 175,
+      "ms_per_step": 30.608809142857222,
+      "wall_sec": 16.676054799999974
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "batch_size": 512,
+      "ok": true,
+      "sec_per_epoch": 5.040918449999992,
+      "grad_steps_per_epoch": 88,
+      "ms_per_step": 57.28316420454537,
+      "wall_sec": 15.599161500000037
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "batch_size": 1024,
+      "ok": true,
+      "sec_per_epoch": 4.06752350000005,
+      "grad_steps_per_epoch": 44,
+      "ms_per_step": 92.44371590909205,
+      "wall_sec": 13.12972979999995
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "batch_size": 64,
+      "ok": true,
+      "sec_per_epoch": 18.463714649999986,
+      "grad_steps_per_epoch": 698,
+      "ms_per_step": 26.452313252148976,
+      "wall_sec": 56.62075730000004
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "batch_size": 128,
+      "ok": true,
+      "sec_per_epoch": 14.019027649999998,
+      "grad_steps_per_epoch": 349,
+      "ms_per_step": 40.16913366762177,
+      "wall_sec": 44.291067699999985
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "batch_size": 256,
+      "ok": true,
+      "sec_per_epoch": 12.67958619999996,
+      "grad_steps_per_epoch": 175,
+      "ms_per_step": 72.45477828571406,
+      "wall_sec": 40.06971629999998
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "batch_size": 512,
+      "ok": true,
+      "sec_per_epoch": 10.378168000000016,
+      "grad_steps_per_epoch": 88,
+      "ms_per_step": 117.93372727272745,
+      "wall_sec": 33.456906000000004
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "batch_size": 1024,
+      "ok": true,
+      "sec_per_epoch": 9.39530005000006,
+      "grad_steps_per_epoch": 44,
+      "ms_per_step": 213.52954659091046,
+      "wall_sec": 30.642154899999923
+    }
+  ]
+}

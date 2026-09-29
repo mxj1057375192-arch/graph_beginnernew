@@ -1,0 +1,59 @@
+# ===========================================================================
+# 图神经网络作业 · 运行环境
+#
+# 实测环境:Windows 10 / Python 3.12.14 / 纯 CPU(i5-1135G7,无 NVIDIA GPU)
+# 版本号均为 2026-09-27 在本机实际安装并验证通过的版本,非估计值。
+#
+# 安装(建议使用清华镜像加速):
+#   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+#
+# 关于 torch:PyPI 上的 torch 2.14.0 在 Windows 上即为 CPU 版。若需指定
+# CPU 轮子,可用官方索引:
+#   pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
+# ===========================================================================
+
+# --- 深度学习框架 ---
+torch==2.14.0
+torch_geometric==2.8.0.post1
+
+# --- 采样器运行时依赖(必需!)---
+# NeighborLoader / LinkNeighborLoader 没有纯 PyTorch 回退实现,缺少本包会在
+# 迭代时报 ImportError: 'NeighborSampler' requires either 'pyg-lib' or 'torch-sparse'。
+# 而子图采样正是任务一、任务二的核心考点,所以这是必需依赖。
+#
+# 注意:本包不在 PyPI 上,必须从 data.pyg.org 安装,且 wheel 的 +ptXXX 标签
+# 必须与已装 torch 版本严格对应:
+#   pip install pyg_lib -f https://data.pyg.org/whl/torch-2.14.0+cpu.html
+pyg_lib==0.9.0+pt214cpu
+
+# --- 数值与数据处理 ---
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.6
+
+# --- 评价指标 ---
+scikit-learn==1.9.1
+
+# --- 绘图(实验报告用) ---
+matplotlib==3.11.2
+
+# --- 进度显示 ---
+tqdm==4.70.1
+
+# ---------------------------------------------------------------------------
+# 说明
+#
+# 1. 不需要 torch-scatter / torch-sparse / torch-cluster
+#    PyG 2.8 已改为纯 PyTorch 实现,上述扩展仅在需要极致性能时才装。
+#    它们过去是 Windows 上安装 PyG 最大的障碍,现在已不是必需。
+#
+# 2. 不要安装 torch_geometric[full]
+#    该 extra 会引入 numba / rdkit / trimesh / rdflib 等大量与作业无关的重依赖,
+#    其中 numba 在 Python 3.12 上的轮子支持还不稳定。本作业只需要
+#    scipy + scikit-learn,已单独列出。
+#
+# 3. numpy 必须是 2.x 且与 torch 配套
+#    本机另一个环境(py310)因 torch 2.1.0 搭配 numpy 2.2.6 而报
+#    "Numpy is not available",PyG 一跑即崩。改动 numpy 版本前请先跑
+#    `python -m common.smoke_test` 确认互转仍然正常。
+# ---------------------------------------------------------------------------

@@ -1,0 +1,120 @@
+{
+  "args": {
+    "datasets": [
+      "Flickr"
+    ],
+    "models": [
+      "GCN",
+      "GAT",
+      "GraphSAGE",
+      "GIN"
+    ],
+    "modes": [
+      "full",
+      "sampler"
+    ],
+    "epochs": 3,
+    "hidden": 32,
+    "task_dir": "task1",
+    "skip_validate": true,
+    "out": "results/smoke_flickr.json"
+  },
+  "matrix": [
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "mode": "full",
+      "ok": true,
+      "sec_per_epoch": 0.362784199999993,
+      "grad_steps_per_epoch": 1,
+      "params": 17447,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 1.7416819000000032
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GCN",
+      "mode": "sampler",
+      "ok": true,
+      "sec_per_epoch": 8.949861499999969,
+      "grad_steps_per_epoch": 698,
+      "params": 17447,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 27.328855800000042
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "mode": "full",
+      "ok": true,
+      "sec_per_epoch": 1.688816949999989,
+      "grad_steps_per_epoch": 1,
+      "params": 69031,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 6.87160590000002
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GAT",
+      "mode": "sampler",
+      "ok": true,
+      "sec_per_epoch": 18.353944799999994,
+      "grad_steps_per_epoch": 698,
+      "params": 69031,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 55.881663100000026
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GraphSAGE",
+      "mode": "full",
+      "ok": true,
+      "sec_per_epoch": 0.646385199999969,
+      "grad_steps_per_epoch": 1,
+      "params": 34471,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 3.5823451999999634
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GraphSAGE",
+      "mode": "sampler",
+      "ok": true,
+      "sec_per_epoch": 10.561582049999998,
+      "grad_steps_per_epoch": 698,
+      "params": 34471,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 32.985918500000025
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GIN",
+      "mode": "full",
+      "ok": true,
+      "sec_per_epoch": 0.6378077500000074,
+      "grad_steps_per_epoch": 1,
+      "params": 19559,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 3.510953200000017
+    },
+    {
+      "dataset": "Flickr",
+      "model": "GIN",
+      "mode": "sampler",
+      "ok": true,
+      "sec_per_epoch": 12.753628050000032,
+      "grad_steps_per_epoch": 698,
+      "params": 19559,
+      "num_nodes": 89250,
+      "num_edges": 899756,
+      "wall_sec": 37.65026439999997
+    }
+  ]
+}

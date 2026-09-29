@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# 数据集:由 PyG 自动下载,体积大(数百 MB ~ 数 GB),不入库
+# ---------------------------------------------------------------------------
+task1_node_classification/data/
+task2_link_prediction/data/
+task3_graph_classification/data/
+
+# 任务四的数据随 kge_framework 一起克隆,但训练产物不入库
+task4_knowledge_graph/models/
+task4_knowledge_graph/data/*/entity2vec*.init
+
+# kge_framework 自带的数据集共约 187 MB(FB15k / FB15k-237 / YAGO3-10 等)。
+# 这些是老师提供的框架自带的,不需要随作业提交,体积也远超常规仓库上限。
+# 本作业实际只用到三个 countries 数据集(各约 60 KB)。
+task4_knowledge_graph/kge_framework/data/FB15k/
+task4_knowledge_graph/kge_framework/data/FB15k-237/
+task4_knowledge_graph/kge_framework/data/YAGO3-10/
+task4_knowledge_graph/kge_framework/data/wn18/
+task4_knowledge_graph/kge_framework/data/wn18rr/
+
+# kge_framework 训练时产生的日志与 checkpoint。
+# models*/ 用通配符:框架会按实验名另建 models_test / models_rotatetest /
+# models_timing 等目录,只写 models/ 会漏掉它们。
+task4_knowledge_graph/kge_framework/code/*.log
+task4_knowledge_graph/kge_framework/models*/
+
+# ---------------------------------------------------------------------------
+# 模型权重与检查点
+# ---------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.pkl
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------------
+# 编辑器 / 系统
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
